@@ -47,6 +47,9 @@ Route::prefix('/admin')->name('admin')->group(function () {
             //update
             Route::post('/{id}/edit', [UserController::class, 'update'])->name('update');
 
+            //destroy
+            Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('destroy');
+
 
             // Route::get('/factory', function(){
             //     User::factory()->count(10)->create();
@@ -67,6 +70,9 @@ Route::prefix('/admin')->name('admin')->group(function () {
 
              //update
              Route::post('/{id}/edit', [CarController::class, 'update'])->name('update');
+
+            //destroy
+            Route::get('/{id}/destroy', [CarController::class, 'destroy'])->name('destroy');
 
             Route::get('/factory', function(){
                 Car::factory()->count(10)->create();

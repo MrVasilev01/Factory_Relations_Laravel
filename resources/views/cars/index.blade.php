@@ -37,12 +37,16 @@
                                         <td>{{$car->name}}</td>
                                         <td>{{$car->model}}</td>
                                         <td>{{$car->color}}</td>
-                                        <td>{{$car->user->name  ?? ''}}</td>
 
                                         <td>
                                             {{-- edit --}}
-                                            <a href="{{route('admincars.edit', $car->id)}}" class="btn btn-primary btn-sm">
+                                            <a href="{{route('admincars.edit', $car->id)}}" style="margin-right: 10px;" class="btn btn-primary btn-sm">
                                                 <i class="fas fa-edit"></i>
+                                            </a>
+
+                                            {{-- delete --}}
+                                            <a href="{{route('admincars.destroy', $car->id)}}" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
                                             </a>
                                         </td>
                                     </tr>

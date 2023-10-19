@@ -67,11 +67,12 @@ class CarController extends Controller
         return redirect()->route('admincars.index')->with('success', 'Car updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Car $car)
-    {
-        //
+    public function destroy($id){
+
+        $car = Car::find($id);
+
+        $car->delete();
+
+        return redirect()->route('admincars.index')->with('success', 'Car deleted successfully.');
     }
 }

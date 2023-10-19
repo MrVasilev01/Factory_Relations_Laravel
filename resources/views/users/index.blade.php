@@ -40,8 +40,13 @@
 
                                         <td>
                                             {{-- edit --}}
-                                            <a href="{{route('adminusers.edit', $user->id)}}" class="btn btn-primary btn-sm">
+                                            <a href="{{route('adminusers.edit', $user->id)}}" style="margin-right: 10px;"  class="btn btn-primary btn-sm">
                                                 <i class="fas fa-edit"></i>
+                                            </a>
+
+                                            {{-- delete --}}
+                                            <a href="{{route('adminusers.destroy', $user->id)}}" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
                                             </a>
                                         </td>
                                     </tr>
